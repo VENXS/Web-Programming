@@ -1,0 +1,406 @@
+#header {
+    background-color: #000066;
+    color: white;
+    text-align: left;
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;
+}
+
+#container {
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav {
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+a:hover {
+    color: grey;
+}
+
+#nav0 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+}
+
+#nav1 {
+    float: left;
+    width: 30%;
+}
+
+#nav2 {
+    float: left;
+    width: 30%;
+}
+
+#nav3 {
+    float: left;
+    width: 30%;
+}
+
+#nav .selected {
+    font-weight: bold;
+}
+
+#content {
+    padding: 50px;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contentBookings {
+    padding: 50px;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: grey;
+}
+
+#info {
+    float: left;
+    width: 250px;
+    background-color: white;
+}
+
+#info2 {
+    float: right;
+    width: 250px;
+}
+
+#formContact {
+    float: right;
+    width: 250px;
+    padding: 50px;
+}
+
+#image {
+    float: left;
+    width: 200px;
+    padding: 20px
+}
+
+body {
+    background-image: url("http://www.dogsgossip.com/image-files/dogs-in-movies.gif");
+    font-family: Helvetica, Arial Narrow, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    margin: 0px;
+    font-family: Monotype Corsiva, Garamond, sans-serif;
+    font-size: 50px;
+}
+
+h2 {
+    margin: 0px;
+    font-family: Monotype Corsiva, Garamond, sans-serif;
+    font-size: 30px;
+}
+
+h4 {
+    font-family: Pristina, Garamond, sans-serif;
+    font-size: 25px;
+    margin: 5px;
+}
+
+footer {
+    clear: both;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.description {
+    background-color: #6F6FA9;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    float: right;
+    border-style: solid;
+    border-width: 5px;
+}
+
+#childrensmovie {
+    padding: 20px;
+}
+
+#artmovie {
+    padding: 20px;
+    clear: both;
+}
+
+#romanticmovie {
+    padding: 20px;
+    clear: both;
+}
+
+#actionmovie {
+    padding: 20px;
+    clear: both;
+}
+
+#title {
+    float: left;
+}
+
+#rating {
+    float: right;
+    background-color: red;
+}
+
+@media (max-width: 400px) {
+    .facet_sidebar {
+        display: none;
+    }
+}
+
+#normalCinderella {
+    display: inline;
+    position: relative;
+
+}
+
+#hiddenCinderella {
+    display: none;
+    position: relative;
+}
+
+#normalDior {
+    display: inline;
+    position: relative;
+}
+
+#hiddenDior {
+    display: none;
+    position: relative;
+}
+
+#normalRide {
+    display: inline;
+    position: relative;
+}
+
+#hiddenRide {
+    display: none;
+    position: relative;
+}
+
+#normalFast {
+    display: inline;
+    position: relative;
+
+}
+
+#hiddenFast {
+    display: none;
+    position: relative;
+}
+
+.rowBoooking {
+    color: white;
+    background-color: grey;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form {
+    background-color: grey;
+    padding: 5px;
+    border: solid;
+}
+
+#times {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#prices {
+    border: solid;
+    padding: 50px;
+
+}
+
+table {
+    background-color: #6F6FA9;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+}
+
+tr:nth-child(odd) {
+    background-color: #6F6FA9;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Capriola);
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    font-family: Capriola, Helvetica, sans-serif;
+}
+
+#cssmenu {
+    width: auto;
+    height: 59px;
+    padding-bottom: 4px;
+}
+
+#cssmenu.align-right {
+    float: right;
+}
+
+#cssmenu.align-right ul li {
+    float: right;
+    margin-right: 0;
+    margin-left: 4px;
+}
+
+#cssmenu.align-right ul li:first-child,
+#cssmenu.align-right ul li:first-child > a {
+    border-bottom-right-radius: 3px;
+}
+
+#cssmenu #bg-one,
+#cssmenu #bg-two,
+#cssmenu #bg-three,
+#cssmenu #bg-four {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#cssmenu #bg-one {
+    height: 10px;
+    background: #0f71ba;
+}
+
+#cssmenu #bg-two {
+    height: 59px;
+    z-index: 2;
+    background: url('images/bg.png');
+}
+
+#cssmenu #bg-three {
+    bottom: 4px;
+    height: 55px;
+    z-index: 3;
+    background: #141414;
+    background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+    background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+    background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+    background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+    background: linear-gradient(to bottom, #555555 0%, #222222 100%);
+}
+
+#cssmenu #bg-four {
+    bottom: 4px;
+    height: 55px;
+    z-index: 4;
+    background: url('images/bg.png');
+}
+
+#cssmenu ul {
+    height: 59px;
+}
+
+#cssmenu ul li {
+    float: left;
+    margin-right: 4px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    z-index: 5;
+}
+
+#cssmenu ul li a {
+    padding: 24px 30px 20px 30px;
+    margin-bottom: 4px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #eeeeee;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#cssmenu ul li:first-child,
+#cssmenu ul li:first-child > a {
+    border-bottom-left-radius: 3px;
+}
+
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+    background: #0f71ba;
+    background: -moz-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fa4f0), color-stop(100%, #0f71ba));
+    background: -webkit-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+    background: -o-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+    background: -ms-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+    background: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
+}
+
+#cssmenu ul li a:hover,
+#cssmenu ul li.active > a {
+    background: url('images/bg.png');
+    color: #ffffff;
+}
+
+}
