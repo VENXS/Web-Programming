@@ -3,15 +3,14 @@ require("includes/nav.php");
 
 session_start();
 
-
-$voucher = array (
-    'voucherCode' => $_POST['voucherCode'],
-    );
-
-$_SESSION['voucherCode'][] = $voucher;
-
-
 /*
+if(!empty($_SESSION['firstname'])){
+    $firstname = $_SESSION['firstname'];
+}
+else {
+
+    }
+
 $firstname = $_POST['firstname'];
 echo "<p>First name is: " . $firstname . "</p>";
 
@@ -51,14 +50,6 @@ if (is_numeric($_POST['age'])) {
 
 // values from form into session array
 // $Customer = array('firstname' => $personName,
-// 'lastname' => $lastName,
-// 'email' => $personEmail,
-// 'phone' => $phoneNuber);  --- Check if valid number using: ^(\(04\)|04|\+614)[  ]?\d{4}[  ]?\d{4}$
-// store to session
-// var_dump $Customer
-// var_dump $Screening
-
-// clear details button
     ?>
 
 
@@ -66,11 +57,11 @@ if (is_numeric($_POST['age'])) {
 <h1> Please Enter your details to complete the booking </h1>
 
 <form action="checkout.php" method="POST">
-    First Name: <input type="text" name="firstname"><br>
-    Last Name: <input type="text" name="lastname"><br>
-    Email: <input type="text" name="email"><br>
-    Phone Number: <input type="text" name="phone" pattern="^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$" ><br>
-   <input type="submit" value="Submit">
+    First Name: <input type="text" name="firstname" pattern="^[A-Z][a-zA-Z '&-]*[A-Za-z]$" required><br>
+    Last Name: <input type="text" name="lastname" pattern="^[A-Z][a-zA-Z '&-]*[A-Za-z]$" required><br>
+    Email: <input type="text" name="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required><br>
+    Phone Number: <input type="text" name="phone" pattern="^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$" required><br>
+   <input type="submit" value="Next">
 </form>
 
     <form action="reset.php">
@@ -78,4 +69,17 @@ if (is_numeric($_POST['age'])) {
     </form>
 
 
-<?php require("includes/footer.php"); ?>
+<?php
+
+/*
+if ( !isset ($_POST['firstname']) &&
+    !isset ($_POST['lastname']) &&
+    !isset ($_POST['email']) &&
+    !isset ($_POST['phone']))
+{
+    echo'You must fill all fields !<a href="#';
+}
+*/
+
+require("includes/footer.php");
+    ?>

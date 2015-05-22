@@ -20,8 +20,6 @@ var_dump($_SESSION);
 
 // show the discounted price
 // customer name, email, phone, screening (movie, day, time), seat info (ticket type, price), total price, voucher code if valid,
-// empty the shopping cart once written the file unset()
-
 
 ?>
 
@@ -34,9 +32,7 @@ $_SESSION['quantity'] = $_SESSION['SA' + 'SP' ];
 //calculate price in PHP
 
 echo "<p>You have booked " . $_SESSION['quantity'] . " tickets for " . $_SESSION['film'] . " on " . $_SESSION['day'] . "</p>";
-
 ?>
-
 
 
 
@@ -49,11 +45,6 @@ echo "<p>You have booked " . $_SESSION['quantity'] . " tickets for " . $_SESSION
 </form>
 
 
-
-
-
-
-
 <?php
 
 /*
@@ -62,7 +53,7 @@ fwrite($myfile, implode(",", $_SESSION));
 fclose($myfile);
 */
 
-file_put_contents("./nexfile.text", $_SESSION, FILE_APPEND);
+file_put_contents("./booking.text", $_SESSION, FILE_APPEND);
 ?>
 
 <?php require("includes/footer.php"); ?>

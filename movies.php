@@ -15,8 +15,7 @@ session_start();
             $.ajax({
                 dataType: "json",
                 method: "POST",
-               //  url: "https://<?php echo $_SERVER['SERVER_NAME']; ?>/~e54061/wp/movie-service.php"
-                url: "https://jupiter.csit.rmit.edu.au/~e54061/wp/movie-service.php"
+               url: "https://<?php echo $_SERVER['SERVER_NAME']; ?>/~e54061/wp/movie-service.php"
             })
                 .done(function (data) {
                     $.each(data, function (key, val) {

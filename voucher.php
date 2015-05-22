@@ -16,6 +16,13 @@ $_SESSION = array(
     'B3' => $_POST['B3']
 );
 
+$voucher = array (
+    'voucherCode' => $_POST['voucherCode'],
+);
+
+$_SESSION['voucherCode'][] = $voucher;
+
+
 var_dump($_SESSION);
 
 
@@ -74,7 +81,7 @@ else {
 <h1> Voucher </h1>
 
 <form action="customer.php">
-    Voucher Number: <input type="text" name="voucherCode" pattern="^\d{5}-\d{5}-[A-Z]{2}$"
+    Voucher Number: <input type="text" name="voucherCode" pattern="^\d{5}-\d{5}-[A-Z]{2}$" required
                            title="Please enter a valid voucher code"> <br>
     <input type="submit" value="Submit">
 

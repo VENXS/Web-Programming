@@ -277,8 +277,6 @@ if(isset($_POST) && !empty($_POST)){
 
         }
 
-           var subTotal =  prices['SA' ['cheap' + 'expensive']];
-            console.log('subTotal');
 
 // change();
 
@@ -287,6 +285,11 @@ if(isset($_POST) && !empty($_POST)){
         // switch
         // google: populate select with JSon
 
+    var subTotal = prices['SA', 'SP'];
+        console.log(subTotal);
+
+
+    $change(day) 
 
     </script>
 
