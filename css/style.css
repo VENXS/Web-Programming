@@ -395,3 +395,34 @@ tr:nth-child(even) {
     background: url('images/bg.png');
     color: #ffffff;
 }
+
+#buttons {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button1{
+    float: right;
+    background-color: red;
+    color: green;
+    }
+
+.button2{
+    float: left;
+    padding:5px;
+    background-color: #dcdcdc;
+    border: 1px solid #666;
+    color:#000;
+    text-decoration:none;
+
+}
+
+#contentVoucher {
+    background-color: #6F6FA9;
+    padding: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+}

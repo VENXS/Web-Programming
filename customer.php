@@ -3,6 +3,12 @@ require("includes/nav.php");
 
 session_start();
 
+$voucher = array (
+    'voucherCode' => $_POST['voucherCode'],
+);
+
+$_SESSION['voucherCode'][] = $voucher;
+
 /*
 if(!empty($_SESSION['firstname'])){
     $firstname = $_SESSION['firstname'];
@@ -56,10 +62,11 @@ if (is_numeric($_POST['age'])) {
 
 <h1> Please Enter your details to complete the booking </h1>
 
+<div id = 'contentVoucher'>
 <form action="checkout.php" method="POST">
     First Name: <input type="text" name="firstname" pattern="^[A-Z][a-zA-Z '&-]*[A-Za-z]$" required><br>
     Last Name: <input type="text" name="lastname" pattern="^[A-Z][a-zA-Z '&-]*[A-Za-z]$" required><br>
-    Email: <input type="text" name="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required><br>
+    E m a i l          :      <input type="text" name="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required><br>
     Phone Number: <input type="text" name="phone" pattern="^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$" required><br>
    <input type="submit" value="Next">
 </form>
@@ -67,8 +74,8 @@ if (is_numeric($_POST['age'])) {
     <form action="reset.php">
         <input type="submit" value="Clear details">
     </form>
-
-
+</div>
+<br><br>
 <?php
 
 /*

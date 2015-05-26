@@ -3,7 +3,7 @@ require("includes/nav.php");
 
 session_start();
 
-if(isset($_POST) && !empty($_POST)){
+if (isset($_POST) && !empty($_POST)) {
     var_dump($_POST);
     echo "<p> Movie name is: " . $film . "</p>";
 };
@@ -19,19 +19,19 @@ if(isset($_POST) && !empty($_POST)){
             <form id="bookingform" action="voucher.php" method="POST"
                   enctype="multipart/form-data">
                 <select name="film">
-                    <option value=${title}> ${title} </option>
-                    <option value="RC"> The Longest Ride</option>
+                    <option value="CH"> When Marni Was There</option>
+                    <option value="RC"> Cinderella</option>
                     <option value="AC"> Fast and Furious 7</option>
                     <option value="AF"> Dior and I</option>
                 </select>
                 <select name="day">
                     <option value="Monday"> Monday</option>
-                    <option value=2> Tuesday</option>
-                    <option value=3> Wednesday</option>
-                    <option value=4> Thursday</option>
-                    <option value=5> Friday</option>
-                    <option value=6> Saturday</option>
-                    <option value=0> Sunday</option>
+                    <option value="Tuesday"> Tuesday</option>
+                    <option value="Wednesday"> Wednesday</option>
+                    <option value="Thursday"> Thursday</option>
+                    <option value="Friday"> Friday</option>
+                    <option value="Saturday"> Saturday</option>
+                    <option value="Sunday"> Sunday</option>
                 </select>
                 <select name="time">
                     <option> 1pm</option>
@@ -180,18 +180,21 @@ if(isset($_POST) && !empty($_POST)){
                 <div>
                     <input id="submit_button" type="submit" value="Book Tickets / Next"/>
                 </div>
+
+                <p> You're subtotal is: </p>
+
         </div>
     </div>
 
     <script>
 
-        var SUNDAY = 0;
-        var MONDAY = 1;
-        var TUESDAY = 2;
-        var WEDNESDAY = 3;
-        var THURSDAY = 4;
-        var FRIDAY = 5;
-        var SATURDAY = 6;
+        var Sunday = 0;
+        var Monday = 1;
+        var Tuesday = 2;
+        var Wednesday = 3;
+        var Thursday = 4;
+        var Friday = 5;
+        var Saturday = 6;
 
 
         var prices = {
@@ -278,20 +281,35 @@ if(isset($_POST) && !empty($_POST)){
         }
 
 
-// change();
+        // change();
 
         // variables into JQuery, select = target
         // .val
         // switch
         // google: populate select with JSon
 
-    var subTotal = prices['SA', 'SP'];
-        console.log(subTotal);
+
+        //define: quantity, type, subTotal, and send to SESSION
+
+        $x = 5;
+        $y = 4;
+
+        <label for="subTotal"></label>
+        $subTotal = x * y;
+        document.getElementById("subTotal").innterHTML = 'subTotal';
+        $_POST[$subTotal];
 
 
-    $change(day) 
+        $_SESSION['post'][$subTotal] = $value;
+            //console.log('subTotal');
+        //$_POST['subTotal'];
 
     </script>
 
 
-<?php include_once("includes/footer.php"); ?>
+<?php
+
+// $subTotal = $_SESSION['$SA + $SP'];
+// echo $subTotal;
+
+include_once("includes/footer.php"); ?>

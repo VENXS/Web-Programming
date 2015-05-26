@@ -25,15 +25,33 @@ var_dump($_SESSION);
 
 <h1> Please confirm the following information to complete the checkout </h1>
 
+<img src="cinema-girl.jpg" alt="Image" width="200px">
+
 <?php
 
-$_SESSION['quantity'] = $_SESSION['SA' + 'SP' ];
+//$_SESSION['quantity'] = $_SESSION['SA' + 'SP' ];
 
 //calculate price in PHP
 
 echo "<p>You have booked " . $_SESSION['quantity'] . " tickets for " . $_SESSION['film'] . " on " . $_SESSION['day'] . "</p>";
 ?>
 
+<script>
+    $.ajax({
+        dataType: "json",
+        method: "POST",
+        url: "https://<?php echo $_SERVER['SERVER_NAME']; ?>/~e54061/wp/movie-service.php"
+    })
+        .done(function (data) {
+            $.each(data, function (key, val) {
+                $.get("includes/movietemplate.html", function (template) {
+                    $.tmpl(template, val).appendTo("#movies");
+                    console.log(data);
+                });
+            });
+        });
+
+</script>
 
 
 <form action="tickets.php">
