@@ -3,10 +3,11 @@ require("includes/nav.php");
 
 session_start();
 
+$_SESSION["booking"]=$booking;
+
 if (isset($_POST) && !empty($_POST)) {
     var_dump($_POST);
-    echo "<p> Movie name is: " . $film . "</p>";
-};
+    };
 
 ?>
 
@@ -19,10 +20,10 @@ if (isset($_POST) && !empty($_POST)) {
             <form id="bookingform" action="voucher.php" method="POST"
                   enctype="multipart/form-data">
                 <select name="film">
-                    <option value="CH"> When Marni Was There</option>
-                    <option value="RC"> Cinderella</option>
-                    <option value="AC"> Fast and Furious 7</option>
-                    <option value="AF"> Dior and I</option>
+                    <option value="CH"> Planes: Fire and Rescue</option>
+                    <option value="RC"> Once a Princess </option>
+                    <option value="AC"> Guardians of the Galaxy </option>
+                    <option value="AF"> Mardaani</option>
                 </select>
                 <select name="day">
                     <option value="Monday"> Monday</option>

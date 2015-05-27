@@ -11,6 +11,7 @@ $_SESSION = array(
     'SP' => $_POST['SP'],
     'SC' => $_POST['SC'],
     'FA' => $_POST['FA'],
+    'FC' => $_POST['FC'],
     'B1' => $_POST['B1'],
     'B2' => $_POST['B2'],
     'B3' => $_POST['B3'],

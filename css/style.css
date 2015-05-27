@@ -426,3 +426,27 @@ tr:nth-child(even) {
     margin-right: auto;
     border: solid;
 }
+
+
+#ticket {
+    border:solid;
+    width: 40%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#6F6FA9;
+}
+
+#customerForm {
+    text-align: center;
+    padding: 10px;
+
+}
+
+#checkOut {
+    border:solid;
+    width: 60%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: cornflowerblue;
+}
+

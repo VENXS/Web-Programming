@@ -3,38 +3,62 @@ require("includes/nav.php");
 
 session_start();
 
-if(isset($_POST) && !empty($_POST)){
+if(isset($_POST) && !empty($_POST)) {
     var_dump($_POST);
-};
+}
 
-$customer = array (
-    'firstname' => $_POST['firstname'],
-    'lastname' => $_POST['lastname'],
-    'email' => $_POST['email'],
-    'phone' => $_POST['phone']
+$customer = array(
+    'firstName' => $_POST['firstName'],
+    'lastName' => $_POST['lastName'],
+    'emailAdd' => $_POST['emailAdd'],
+    'phoneNumber' => $_POST['phoneNumber']
 );
 
 $_SESSION['customer'][] = $customer;
+if(isset($_SESSION)) {
+    var_dump($_SESSION);
+}
 
-var_dump($_SESSION);
+function movieTitle()
+{
+    if ($_SESSION['film'] === 'AF') {
+        echo "Mardaani";
+    }
+    if ($_SESSION['film'] === 'CH') {
+        echo "Planes: Fire and Rescue";
+    }
+    if ($_SESSION['film'] === 'RC') {
+        echo "Once a Princess";
+    }
+    if ($_SESSION['film'] === 'AC') {
+        echo "Guardians of the Galaxy";
+    }
+}
+
+movieTitle();
 
 // show the discounted price
 // customer name, email, phone, screening (movie, day, time), seat info (ticket type, price), total price, voucher code if valid,
 
 ?>
 
-<h1> Please confirm the following information to complete the checkout </h1>
 
-<img src="cinema-girl.jpg" alt="Image" width="200px">
 
+<h2> Please confirm the following information to complete the checkout </h2>
+    <img src="${poster}" width="200px">
+
+<div id = "checkOut">
 <?php
-
-//$_SESSION['quantity'] = $_SESSION['SA' + 'SP' ];
 
 //calculate price in PHP
 
-echo "<p>You have booked " . $_SESSION['quantity'] . " tickets for " . $_SESSION['film'] . " on " . $_SESSION['day'] . "</p>";
+movieTitle();
+
+echo "<p>You have booked " . ($_SESSION['SA'] + $_SESSION['SP'] + $_SESSION['SC'] + $_SESSION['FC'] + $_SESSION['FA'] + $_SESSION['B1'] + $_SESSION['B2'] + $_SESSION['B3']) . " tickets on " . $_SESSION['day'] . " for " . $customer['firstName'] . " " . $customer['lastName'] . ". </p>";
+echo "It will cost " . $price ;
+
 ?>
+</div>
 
 <script>
     $.ajax({
@@ -55,7 +79,7 @@ echo "<p>You have booked " . $_SESSION['quantity'] . " tickets for " . $_SESSION
 
 
 <form action="tickets.php">
-    <input type="submit" value="Buy Now">
+    <input type="submit" value="Next">
 </form>
 
 <form action="book.php">
@@ -65,13 +89,12 @@ echo "<p>You have booked " . $_SESSION['quantity'] . " tickets for " . $_SESSION
 
 <?php
 
-/*
 $myfile = fopen("./newfile.txt", "a");
 fwrite($myfile, implode(",", $_SESSION));
 fclose($myfile);
-*/
 
-file_put_contents("./booking.text", $_SESSION, FILE_APPEND);
+
+// file_put_contents("./booking.text", $_SESSION, FILE_APPEND);
 ?>
 
 <?php require("includes/footer.php"); ?>
