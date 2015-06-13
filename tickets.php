@@ -35,6 +35,7 @@ if ($_SESSION['B2'] > 0) {
 if ($_SESSION['B3'] > 0) {
     echo "<p> Your three person beanbag ticket: " . $_SESSION['B3'] . ". </p>";
 }
+
 ?>
 </div>
 
@@ -43,27 +44,21 @@ if ($_SESSION['B3'] > 0) {
 
 <div id=buttons>
     <div class=button1>
-        <form action="reset.php">
-            <input type="submit" value="Click here to finish">
-        </form>
-    </div>
-    <div class=button2>
         <form action="print.php">
-            <input type="submit" value="Print">
+            <input type="submit" value="Print" id="button">
         </form>
     </div>
+	<div class=button2>
+        <form action="reset.php">
+            <input type="submit" value="Click here to finish" id="button">
+        </form>
+    </div>
+    
 </div>
 
 <br>
 
 <?php
-
-// for each () {
-// create
-// <div id = "ticket"> </div>
-// }
-
-
 require("includes/footer.php");
 ?>
 

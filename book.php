@@ -3,29 +3,28 @@ require("includes/nav.php");
 
 session_start();
 
-$_SESSION["booking"]=$booking;
-
 if (isset($_POST) && !empty($_POST)) {
     var_dump($_POST);
-    };
+	
+	
+};
 
 ?>
 
-    <h2> Book Movie Tickets Now </h2>
+    <h1> Book Movie Tickets </h1>
     <p> Fill out the form below to book your tickets </p>
 
     <div id="contentBookings">
 
-        <div id="form">
             <form id="bookingform" action="voucher.php" method="POST"
                   enctype="multipart/form-data">
-                <select name="film">
+                <select name="film" id="dropdown">
                     <option value="CH"> Planes: Fire and Rescue</option>
-                    <option value="RC"> Once a Princess </option>
-                    <option value="AC"> Guardians of the Galaxy </option>
+                    <option value="RC"> Once a Princess</option>
+                    <option value="AC"> Guardians of the Galaxy</option>
                     <option value="AF"> Mardaani</option>
                 </select>
-                <select name="day">
+                <select name="day" id="dropdown">
                     <option value="Monday"> Monday</option>
                     <option value="Tuesday"> Tuesday</option>
                     <option value="Wednesday"> Wednesday</option>
@@ -34,13 +33,13 @@ if (isset($_POST) && !empty($_POST)) {
                     <option value="Saturday"> Saturday</option>
                     <option value="Sunday"> Sunday</option>
                 </select>
-                <select name="time">
+                <select name="time" id="dropdown">
                     <option> 1pm</option>
                     <option> 6pm</option>
                     <option> 9pm</option>
                 </select>
-
-                <table style="width:70%">
+<br><br>
+                <table style="width:70%" name="quantity">
                     <tr>
                         <td> Adult</td>
                         <td> $18</td>
@@ -177,18 +176,64 @@ if (isset($_POST) && !empty($_POST)) {
                     </tr>
                 </table>
 
-
+<br><br>
                 <div>
-                    <input id="submit_button" type="submit" value="Book Tickets / Next"/>
+                    <input type="submit" id="button" value="Book Tickets / Next"/>
                 </div>
 
-                <p> You're subtotal is: </p>
-
-        </div>
+            <br>
+            <div id="discounted">
+        <p> The subtotal </p>
     </div>
+    <script>
+        var quantity = 10;
+        var prices = 4.5;
 
+        var subTotal = prices * quantity;
+
+        function subPrice(prices, quantity) {
+            document.getElementById("discounted").innerHTML = "You're subtotal is: $" + subTotal;
+            //document.write("You're subtotal is: $" + subTotal);
+        }
+        subPrice();
+
+        var discount = .80;
+        var discountedPrice = subTotal * discount;
+
+        function disPrice(subTotal, discount) {
+            if (voucherCode) {
+                document.getElementById("discounted").innerHTML = "You're new subtotal is $" + discountedPrice;
+                $.post('discountedPrice');
+            }
+        }
+        ;
+    </script>
+	
+
+<!--
+            var prices = if ('day' === Monday || Tuesday) {
+                prices = prices['SA[cheap]'];
+            }
+
+            var quantity = 10;
+            var prices = 4.5;
+
+            var subTotal = prices * quantity;
+
+            function subPrice(prices, quantity) {
+                document.write("You're subtotal is: $" + subTotal);
+                       }
+
+            subPrice();
+            </div>
+    </div>
+-->
     <script>
 
+	var pricesc = array(12, 10, 8, 25, 20, 20, 20, 20);
+	var pricesf = array(18, 15, 12, 30, 25, 30, 30, 30);
+	
+	
         var Sunday = 0;
         var Monday = 1;
         var Tuesday = 2;
@@ -234,6 +279,11 @@ if (isset($_POST) && !empty($_POST)) {
 
         };
 
+        if (day === Monday || Tuesday) {
+            prices = 'cheap';
+
+        }
+
 
         var movie = {
             'CH': {
@@ -272,42 +322,41 @@ if (isset($_POST) && !empty($_POST)) {
             }
         };
 
-        document
-        ).ready(function () {
+        $document(ready)
+        $document.ready(function () {
             .
-            change()
+            onchange( )
                 .getElementById()
 
 
         }
 
 
-        // change();
-
-        // variables into JQuery, select = target
-        // .val
-        // switch
-        // google: populate select with JSon
 
 
-        //define: quantity, type, subTotal, and send to SESSION
+            // change();
 
-        $x = 5;
-        $y = 4;
+            // variables into JQuery, select = target
+            // .val
+            // switch
+            // google: populate select with JSon
 
-        <label for="subTotal"></label>
+
+            //define: quantity, type, subTotal, and send to SESSION
+
+        < label for= "subTotal" > < / label >
         $subTotal = x * y;
-        document.getElementById("subTotal").innterHTML = 'subTotal';
-        $_POST[$subTotal];
+            document.getElementById("subTotal").innterHTML = 'subTotal';
+            $_POST[$subTotal];
 
 
         $_SESSION['post'][$subTotal] = $value;
-            //console.log('subTotal');
+        //console.log('subTotal');
         //$_POST['subTotal'];
 
-    </script>
-
-
+        </script>
+</div>    
+<br><br>
 <?php
 
 // $subTotal = $_SESSION['$SA + $SP'];

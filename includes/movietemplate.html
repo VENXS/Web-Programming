@@ -1,56 +1,17 @@
+
+<div id ="movieimport">
 <h2> ${title} </h2>
+<p> ${summary} </p>
+<div id = "rated">
+<img src="${rating}" alt="movie rating" width="90px">
+</div>
 <img src="${poster}" width="200px">
-<video width="320" height="240" class="movie_video">
+<p> <div class = "description"> ${description} </div></p>
+</div> 
+
+<video width="450" height="340" class="movie_video" controls>
     <source src="${trailer}" type="video/mp4">
 </video>
-<img src="${rating}" alt="movie rating">
-<p> ${summary} </p>
-<p> ${description} </p>
-<p> ${sessions}</p>
-<li> ${Monday}</li>
-
-<p> <div class = "description"> ${description} </div></p>
 
 
-<div id="normalCinderella">
-    The story of Cinderella follows the fortunes of young Ella (Lily James) whose merchant father
-    remarries following the death of her mother.
-    <a href="#" onclick="showMoreCinderella()"> Read More </a>
 
-    <script>
-        function showMoreCinderella() {
-            document.getElementById("normalCinderella").style.display = "none";
-            document.getElementById("hiddenCinderella").style.display = "inline";
-        }
-    </script>
-</div>
-
-
-<div id="hiddenCinderella">
-    <p> The story of Cinderella follows the fortunes of young Ella (Lily James) whose merchant father
-        remarries following the death of her mother. Eager to support her loving father, Ella welcomes
-        her new stepmother (Cate Blanchett) and her daughters Anastasia (Holliday Grainger) and Drisella
-        (Sophie McShera) into the family. </p>
-
-    <div id="times">
-        <h4> Times showing: </h4>
-        <ul>
-            <li>Monday 1pm</li>
-            <li> Tuesday 1pm</li>
-            <li> Wednesday 6pm</li>
-            <li> Thursday 6pm</li>
-            <li> Friday 6pm</li>
-            <li> Saturday 12pm</li>
-            <li> Sunday 12pm</li>
-        </ul>
-    </div>
-
-    <a href="book.html"><h4> Book Now </h4></a>
-    <br>
-    <a href="#" onclick="showLessCinderella()"> Show Less </a>
-    <script>
-        function showLessCinderella() {
-            document.getElementById("normalCinderella").style.display = "inline";
-            document.getElementById("hiddenCinderella").style.display = "none";
-        }
-    </script>

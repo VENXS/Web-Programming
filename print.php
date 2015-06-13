@@ -53,12 +53,8 @@ if ($_SESSION['B3'] > 0) {
 
 $ticketQuantity = ($_SESSION['SA'] + $_SESSION['SP'] + $_SESSION['SC'] + $_SESSION['FC'] + $_SESSION['FA'] + $_SESSION['B1'] + $_SESSION['B2'] + $_SESSION['B3']);
 
-foreach($ticketQuantity as $key => $value)
-{
-    echo "<div class = 'ticketPrint'> Print this $value </div>";
-
-}
-
+//foreach($ticketQuantity as $value)
+//{    echo "<div class = 'ticketPrint'> Print this $value </div>"; }
 
 ?>
 </div>

@@ -5,11 +5,26 @@ session_start();
 ?>
 
     <br> <h2> Silverado's Grand Reopening </h2>
-    <h3> Doors Open on the 14th of May!</h3>
-    <div id="picture"> <!-- Image sourced from http://www.productionparadise.com/ for educational purposes only -->
-        <img src="cinema-image.jpg" alt="cinema" width=700px/>
-    </div>
-    <div id="content">
+    <h3> Doors Open 14th of May!</h3>
+    <div id="picture"> 
+	
+<img id="Change_Image" src="http://www.productionparadise.com/newsletters/938/photos/65385/original/citystars-springs-fashion-shoot-louay-nasser-cinema.jpg" alt="Letter A" width="750px" height="500px">
+
+<script>
+function change_image() {
+    var pic = document.getElementById('Change_Image').src;
+    if (pic == 'http://www.productionparadise.com/newsletters/938/photos/65385/original/citystars-springs-fashion-shoot-louay-nasser-cinema.jpg') {
+        document.getElementById('Change_Image').src = 'http://www.cedia.org/files/i/current/cinema-front-view.jpg';
+    } else {
+        document.getElementById('Change_Image').src = 'http://www.productionparadise.com/newsletters/938/photos/65385/original/citystars-springs-fashion-shoot-louay-nasser-cinema.jpg';
+    }
+}
+
+setInterval(change_image, 2000);
+</script>
+	
+		
+        <div id="content">
         <div id="info">
             <h4> Keep it local </h4>
 

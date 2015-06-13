@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Capriola);
 
 #header {
-    background-color: #000066;
+    background: #000066;
+	background: linear-gradient(to right, #000066, #5C7A99 60%, #99CCFF, #E0E0FF 98%);
     color: white;
     text-align: left;
     width: 100%;
@@ -11,6 +12,14 @@
     float: center;
 }
 
+p {
+color: black;
+}
+
+p:hover {
+color: grey;
+}
+
 #container {
     background-color: white;
     color: black;
@@ -18,17 +27,6 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-}
-
-#nav {
-    background-color: #121212;
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 0px;
-    margin-left: auto;
-    margin-right: auto;
-
 }
 
 a:hover {
@@ -75,7 +73,15 @@ a:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: grey;
+	
+	background-color: #6F6FA9;
+    padding: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+	font-weight: bold;
+	color: black;
 }
 
 #info {
@@ -102,7 +108,8 @@ a:hover {
 }
 
 body {
-    background-image: url("http://www.dogsgossip.com/image-files/dogs-in-movies.gif");
+    background-image: url("https://c1.staticflickr.com/5/4142/4894306201_5845f467d3_b.jpg");
+	background-size:cover;
     font-family: Helvetica, Arial Narrow, sans-serif;
 }
 
@@ -131,19 +138,24 @@ h4 {
 
 footer {
     clear: both;
-    background-color: #121212;
+    background: linear-gradient(to bottom, #555555 0%, #222222 100%);
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 14px 20px 10px 20px;
+    margin-bottom: 4px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #eeeeee;
+    font-size: 15px;
+    text-decoration: none;
 }
 
 .description {
     background-color: #6F6FA9;
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    float: right;
     border-style: solid;
     border-width: 5px;
 }
@@ -232,11 +244,6 @@ footer {
     margin-right: auto;
 }
 
-#form {
-    background-color: grey;
-    padding: 5px;
-    border: solid;
-}
 
 #times {
     width: 50%;
@@ -262,10 +269,11 @@ table {
     margin-left: auto;
     margin-right: auto;
     border: solid;
+
 }
 
 tr:nth-child(odd) {
-    background-color: #6F6FA9;
+    background-color: #9A9AC3;
 }
 
 tr:nth-child(even) {
@@ -301,7 +309,7 @@ tr:nth-child(even) {
 
 #cssmenu.align-right ul li {
     float: right;
-    margin-right: 0;
+    margin-right: 5px;
     margin-left: 4px;
 }
 
@@ -329,8 +337,7 @@ tr:nth-child(even) {
 #cssmenu #bg-two {
     height: 59px;
     z-index: 2;
-    background: url('images/bg.png');
-}
+    }
 
 #cssmenu #bg-three {
     bottom: 4px;
@@ -350,6 +357,14 @@ tr:nth-child(even) {
     height: 55px;
     z-index: 4;
     background: url('images/bg.png');
+}
+
+#cssmenu{
+   text-align:center;
+   overflow: hidden;
+}
+#cssmenu ul {
+   display:inline-block;
 }
 
 #cssmenu ul {
@@ -374,13 +389,7 @@ tr:nth-child(even) {
     text-decoration: none;
 }
 
-#cssmenu ul li:first-child,
-#cssmenu ul li:first-child > a {
-    border-bottom-left-radius: 3px;
-}
-
-#cssmenu ul li:hover,
-#cssmenu ul li.active {
+#cssmenu ul li:hover {
     background: #0f71ba;
     background: -moz-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fa4f0), color-stop(100%, #0f71ba));
@@ -390,31 +399,27 @@ tr:nth-child(even) {
     background: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
 }
 
-#cssmenu ul li a:hover,
-#cssmenu ul li.active > a {
+#cssmenu ul li a:hover > a {
     background: url('images/bg.png');
     color: #ffffff;
 }
 
+
 #buttons {
-    width: 30%;
     margin-left: auto;
     margin-right: auto;
-}
+	width: 300px;
+	padding: 30px;
+	}
 
 .button1{
-    float: right;
-    background-color: red;
-    color: green;
-    }
+	float: left; 
+	width: 90px;
+	}
 
 .button2{
-    float: left;
-    padding:5px;
-    background-color: #dcdcdc;
-    border: 1px solid #666;
-    color:#000;
-    text-decoration:none;
+ 	width: 90px;	
+	float: right;
 
 }
 
@@ -425,6 +430,9 @@ tr:nth-child(even) {
     margin-left: auto;
     margin-right: auto;
     border: solid;
+	font-weight: bold;
+	color: black;
+	
 }
 
 
@@ -437,16 +445,100 @@ tr:nth-child(even) {
 }
 
 #customerForm {
-    text-align: center;
     padding: 10px;
+	width: 80%;
+	text-align: right;
+	
 
 }
 
 #checkOut {
-    border:solid;
     width: 60%;
     margin-left:auto;
     margin-right:auto;
-    background-color: cornflowerblue;
+    display: inline-block;
+	background-color: #6F6FA9;
+  padding: 8px;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
+.subtotal {
+    background-color: whitesmoke;
+    padding: 10px;
+    border: solid;
+
+}
+
+#discounted {
+    background-color: whitesmoke;
+    padding: 10px;
+    border: solid;
+	color: black;
+	border-radius: 5px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+#movieimport {
+width: 80%;
+clear: both;
+margin-left: auto;
+margin-right: auto;
+padding: 50px;
+}
+
+#rated {
+float: right;
+}
+
+
+#button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: black;
+  border: 1px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #6F6FA9;
+}
+
+#button:hover {
+  background-color: #767672;
+  color: white;
+}
+
+#textf {
+ display: inline-block;
+ background-color: #6F6FA9;
+  width: 200px;
+  padding: 8px;
+  color: black;
+  border: 1px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#dropdown {
+ display: inline-block;
+ background-color: #6F6FA9;
+  width: 150px;
+  padding: 5px;
+  color: black;
+  border: 1px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  border-radius: 5px;
+}
